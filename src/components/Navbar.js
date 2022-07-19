@@ -3,7 +3,7 @@ import '../App.css';
 const Navbar = () => {
   return (
     <div className='navbar'>
-    <h1>FakeShop</h1>
+    <h1>FakeShop APP</h1>
       
     </div>
   )
