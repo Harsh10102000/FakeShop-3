@@ -4,7 +4,7 @@ import {useState} from 'react';
 import {useEffect} from 'react';
 import axios from "axios";
 import { Link } from 'react-router-dom';
- import ProductDetails from './components/ProductDetails';
+//  import Product from './components/ProductDetails';
 
 const Products = () => {
     const [loading, setLoading] = useState(false);
@@ -35,7 +35,11 @@ const Products = () => {
   
         {data.map((product)=> ( 
             <div key={product.id} className="card">
-             <div onClick={<ProducDetails/>} ><img src={product.image} alt="#"/></div>
+             {/* <div onClick={<Product/>} > */}
+             <Link to={`/showproduct/${product.id}`}>             
+             <img src={product.image} alt="#"/>
+            </Link>
+             {/* </div> */}
              <div className="card-description">
                  <h6>{product.title}</h6>
                  <h6>{`Price: ${product.price}`}</h6>
